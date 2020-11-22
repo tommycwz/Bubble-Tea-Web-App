@@ -1,0 +1,95 @@
+{
+    "milkTea":[
+		{
+			"id": "MT-001",
+			"name": "Brown Sugar Milk Tea",
+			"image": "Brown-Sugar-Milk-Tea"
+		},
+		{
+			"id": "MT-002",
+			"name": "Iron Goddess Sea Salt Cream",
+			"image": "Caramel-Vanilla-Hazelnut-Milk-Tea"
+		},
+		{
+			"id": "MT-003",
+			"name": "Chatime Milk Tea",
+			"image": "Chatime-Milk-Tea"
+		},
+		{
+			"id": "MT-004",
+			"name": "Coconut Milk Tea",
+			"image": "Coconut-Milk-Tea"
+		},
+		{
+			"id": "MT-005",
+			"name": "Matcha Red Bean Milk Tea",
+			"image": "Matcha-Red-Bean-Milk-Tea"
+		},
+        {
+			"id": "MT-006",
+			"name": "Oolong Milk Tea",
+			"image": "Oolong-Milk-Tea"
+		},
+        {
+			"id": "MT-007",
+			"name": "Red Bean Pearl Milk Tea",
+			"image": "Red-Bean-Pearl-Milk-Tea"
+		},
+        {
+			"id": "MT-008",
+			"name": "Taro Milk Tea",
+			"image": "Taro-Milk_Tea"
+		},
+        {
+			"id": "MT-009",
+			"name": "Wintermelon Milk Tea",
+			"image": "Wintermelon-Milk-Tea"
+		}
+    ],
+    
+    "milkCream":[
+		{
+			"id": "MF-001",
+			"name": "Chocolate Sea Salt Cream",
+			"image": "Chocolate-Sea-Salt-Crema"
+		},
+		{
+			"id": "MF-002",
+			"name": "Iron Goddess Sea Salt Cream",
+			"image": "Iron-Goddess-Sea-Salt-Crema"
+		},
+		{
+			"id": "MF-003",
+			"name": "Matcha Sea Salt Cream",
+			"image": "Matcha-Sea-Salt-Crema"
+		},
+		{
+			"id": "MF-004",
+			"name": "Roasted Tea Sea Salt Cream",
+			"image": "Roasted-Tea-Sea-Salt-Crema"
+		},
+		{
+			"id": "MF-005",
+			"name": "Wintermelon Sea Salt Cream",
+			"image": "Wintermelon-Sea-Salt-Crema"
+		}
+    ],
+    
+    "slush":[
+		{
+			"id": "SH-001",
+			"name": "Mango Smoothie",
+			"image": "Mango-Smoothie"
+		},
+		{
+			"id": "SH-002",
+			"name": "Milk Tea Smoothie",
+			"image": "Milk-Tea-Smoothie"
+		},
+		{
+			"id": "SH-003",
+			"name": "Strawberry Slush",
+			"image": "Strawberry-Slush"
+		}
+    ]
+}
