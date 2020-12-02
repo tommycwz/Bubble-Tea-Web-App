@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/signupCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Bubble Tea Shoppe - Sign Up</title>
+</head>
+
+<body>
+
+<form action="../webpage/registration.php" method="post">
+  <div class="center">
+    
+      
+  <div class="logoContainer">
+        <img src="../image/logo.png" alt="logo" class="logo"><br>
+        <h2>Bubble Tea App</h2>
+        <Strong>This prototype app is only for practice uses.</Strong>
+        <p>Images are taken from google image</p>
+  </div>
+      <hr>
+      <h1>Sign Up</h1>
+
+    <label for="Username"><b>Username <span class="center" id='user'></b></label>
+    <input type="text" id="username" placeholder="Enter Username" name="username" required>
+
+    <label for="password"><b>Password <span class="center" id='message'></b></label>
+    <input type="password" id="password" placeholder="Enter Password" name="password" required>
+
+    <label for="passwordRpt"><b>Repeat Password <span class="center" id='message1'></span></b></label>
+    <input type="password" id="passwordRpt" placeholder="Repeat Password" name="passwordRpt" required>
+      
+    <label for="email"><b>E-mail Address</b></label>
+    <input type="email" placeholder="Enter E-mail Address" name="email" required>
+      
+    <label for="address"><b>Delivery Address</b></label>
+    <input type="text" placeholder="Enter Delivery Address" name="address" required>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+	  <button type="button" class="cancelbtn" onclick="location.href='../webpage/login.html';">Cancel </button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+        
+    </div>
+  </div>
+    
+</form>
+
+    <script>
+        $('#password, #passwordRpt').on('keyup', function () {
+          if ($('#password').val() != $('#passwordRpt').val()) {
+            $(".signupbtn").prop('disabled', true); 
+              $('#message1').html('Note: Password Not Matching!').css('color', 'red');
+          }
+          else{
+              $('#message1').html('');
+              $(".signupbtn").prop('disabled', false);
+          }
+            
+        });
+    </script>
+</body>
+</html>
+
