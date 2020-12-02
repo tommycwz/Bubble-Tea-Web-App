@@ -14,11 +14,13 @@ $cvv = $_POST['cvv'];
 if((strlen($cardNum)!= 12) || !(is_numeric($cardNum))){
     echo '<script>alert("Invalid Card Number!\nA valid Card Number should be a 12-digit combination!")</script>'; 
     header( "Refresh:0; url=http://18.191.207.218//CSC4610/webpage/checkout.php", true, 303);
+    return;
 }
 
 if((strlen($cvv)!= 3) || !(is_numeric($cvv))){
     echo '<script>alert("Invalid CVV!\nA valid CVV should be a 3-digit combination!")</script>'; 
     header( "Refresh:0; url=http://18.191.207.218//CSC4610/webpage/checkout.php", true, 303);
+    return;
 }
 
 $orderID = "O-" . rand(10000,99999);

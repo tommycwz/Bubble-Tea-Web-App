@@ -22,7 +22,7 @@ if($num == 1){
 
 }
 else{
-    $reg= " insert into userinfo(username, password, email, address) values ('$name','$password','$email','$address')";
+    $reg= " insert into userinfo(username, password, email, address, role) values ('$name','$password','$email','$address','user')";
     $_SESSION['name'] = $name;
     mysqli_query($con,$reg); 
 

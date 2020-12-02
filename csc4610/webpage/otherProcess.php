@@ -1,10 +1,12 @@
 <?php
 session_start();
-$flag = $_SESSION['flag'];
+
 $con = mysqli_connect("127.0.0.1", "root", "", "teaapp") or die("Unable to Connect to '$dbhost'");
 mysqli_select_db($con,'teaapp') or die("Could not open the db '$dbname'");
 
-if($flag == "delivery" || $flag == "menu"){
+$flag = $_SESSION['flag'];
+
+if($flag == "delivery" || $flag == "menu" || $flag == "databaseUI"){
     session_destroy();
     header( "Refresh:0; url=http://18.191.207.218/CSC4610/webpage/login.html", true, 303);
 }

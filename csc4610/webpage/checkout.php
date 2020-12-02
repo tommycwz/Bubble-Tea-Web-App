@@ -52,6 +52,7 @@ $result = mysqli_query($con, $sel);
             $tax = $totalbft*9.95/100;
             $tax = number_format($tax,2);
             $ftotal = $tax + $totalbft;
+            $ftotal = number_format($ftotal,2);
             echo "<br><hr><p class='price'>Subtotal: USD {$totalbft}</p>";
             echo "<p class='price'>Tax: USD {$tax}</p>";
             echo "<h2>Total: USD {$ftotal}</h2><hr>";
@@ -112,6 +113,7 @@ $result = mysqli_query($con, $sel);
                     <div id="message"></div>
                     <?php $_SESSION['ftotal'] = $ftotal; ?>
                     
+                    <p>Note: The payment system is not implemented</p>
                     <div class="modal-footer">
                         <input type="submit" class="btn btn-lg btn-block" id="paynow" value="Pay Now">
                     </div>
