@@ -2,9 +2,13 @@
 
 session_start();
 $name = $_SESSION['name'];
+if(isset($_SESSION['cardProblem'])){
+  echo '<script>alert("Invalid Credit Card")</script>';
+}
 
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp") or die("Unable to Connect to '$dbhost'");
-mysqli_select_db($con,'teaapp') or die("Could not open the db '$dbname'");
+unset($_SESSION['cardProblem']);
+include 'dbconnect.php';
+
 $sel = "select * from cart, menu where username = '$name' && menu.bevID = cart.bevID";
 $result = mysqli_query($con, $sel);
 

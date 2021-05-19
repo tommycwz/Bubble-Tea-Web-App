@@ -1,9 +1,7 @@
 <?php
 
 session_start();
-
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp") or die("Unable to Connect to '$dbhost'");
-mysqli_select_db($con,'teaapp') or die("Could not open the db '$dbname'");
+include 'dbconnect.php';
 
 $name = $_POST['username'];
 $password = $_POST['password'];
@@ -18,7 +16,7 @@ $num = mysqli_num_rows($result);
 
 if($num == 1){
     echo '<script>alert("Username Already Taken")</script>'; 
-    header( "Refresh:0; url=http://18.191.207.218/csc4610/webpage/signup.html", true, 303);
+    header("Location: signup.html");
 
 }
 else{
@@ -27,7 +25,7 @@ else{
     mysqli_query($con,$reg); 
 
     echo '<script>alert("Sign Up Success\n")</script>'; 
-    header( "Refresh:0; url=http://18.191.207.218/csc4610/webpage/login.html", true, 303);
+    header( "Location: login.html");
 }
 
 ?>

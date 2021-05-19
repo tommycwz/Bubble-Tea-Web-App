@@ -1,6 +1,5 @@
 <?php
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp") or die("Unable to Connect to '$dbhost'");
-mysqli_select_db($con,'teaapp') or die("Could not open the db '$dbname'");
+include '../dbconnect.php';
 
 $sel = "select * from menu order by bevID";
 $result = mysqli_query($con, $sel);
@@ -30,7 +29,7 @@ $result = mysqli_query($con, $sel);
             $price = $data[4];
             
             echo"<tr>";
-            echo"<td><img src='../../image/milkTea/$bevImage.png' alt='$bevImage' class='$$bevImage' width='150' height='175'></td>";
+            echo"<td><img src='../../image/$bevType/$bevImage.png' alt='$bevImage' class='$$bevImage' width='150' height='175'></td>";
             echo"<td><b>{$bevID}</b></td>";
             echo"<td><b>{$bevName}</b></td>";
             echo"<td><b>{$bevImage}</b></td>";

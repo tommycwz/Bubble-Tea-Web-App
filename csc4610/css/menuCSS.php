@@ -7,8 +7,8 @@
   text-align: center;
   color: white;
   font-size: 60px;
-    font-family: 'Comic Sans MS', cursive;
-    font-style: oblique;
+  font-family: 'Comic Sans MS', cursive;
+  font-style: oblique;
 }
 .center {
   margin: auto;
@@ -18,12 +18,12 @@
 
 
 body {
-        font-family: Arial, Helvetica, sans-serif; 
-        background-image: url("../image/bgi.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-image: url("../image/bgi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .grid-container {
@@ -63,8 +63,11 @@ h1{
     text-align: center;
 }
 
-h3{
+h2{
+    color: white;
     text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-style: oblique;
 }
 
 p{
@@ -109,4 +112,11 @@ hr{
     width: 45%;
 }
 
+.box{
+    border: 5px solid white;
+    height: 8%;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+}
 

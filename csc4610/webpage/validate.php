@@ -1,10 +1,7 @@
 <?php
 
 session_start();
-
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp");
-
-mysqli_select_db($con,'teaapp');
+include 'dbconnect.php';
 
 $name = $_POST['username'];
 $password = $_POST['password'];
@@ -25,14 +22,14 @@ if($num == 1){
 
     
     if($role == "admin"){
-        header( "Refresh:0; url=http://18.191.207.218//CSC4610/webpage/admin/databaseUI.php", true, 303);
+        header( "Location: admin/databaseUI.php");
     }
     else{
-        header( "Refresh:0; url=http://18.191.207.218//CSC4610/webpage/menu.php", true, 303);
+        header( "Location: menu.php");
     }   
 }
 else{
     echo '<script>alert("Incorrect Username or Password!")</script>'; 
-    header( "Refresh:0; url=http://18.191.207.218/CSC4610/webpage/login.html", true, 303);
+    header( "Location: login.html");
 }
 ?>

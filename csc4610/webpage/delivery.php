@@ -34,17 +34,17 @@ var timeslot = [5,10,15,20,25,30];
 function randomPick(arg){
     return arg[Math.floor(Math.random()*arg.length)];
 }
-var luck = randomPick(timeslot);
-    console.log(luck)
-var countDownDate = new Date().getTime() + luck * 60 * 1000;
+  var luck = randomPick(timeslot);
+  var countdown = new Date().getTime() + luck * 60 * 1000;
 
-var x = setInterval(function() {
+  var x = setInterval(function() {
 
   var current = new Date().getTime();
-  var distance = countDownDate - current;
-
+  var distance = countdown - current;
+    
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);    
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
 
   document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 

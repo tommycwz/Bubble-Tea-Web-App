@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp");
-mysqli_select_db($con,'teaapp');
+include 'dbconnect.php';
 
-$bev = $_POST['bev'];
+$bevID = $_POST['bev'];
 $sugar = $_POST['sugar-value'];
 $ice = $_POST['ice-value'];
 $name = $_SESSION['name'];
@@ -18,12 +17,12 @@ while($num == 1){
     $orderID = "B-" . rand(10000,99999);
 }
 
-$reg= " insert into cart(drinkID, username, bevID, sugar, ice) values ('$drinkID','$name','$bev','$sugar','$ice')";
+$reg= " insert into cart(drinkID, username, bevID, sugar, ice) values ('$drinkID','$name','$bevID','$sugar','$ice')";
 mysqli_query($con,$reg);
 
 $flag = "orderprocess";
 $_SESSION['flag'] = $flag;
-header( "Refresh:0; url=http://18.191.207.218/CSC4610/webpage/menu.php", true, 303);
+header( "Location: menu.php", true, 303);
 ?>
 <html>
 <style>
@@ -38,6 +37,6 @@ body {
     
     
 </style>
-<body>
+    <body>
     </body>
 </html>

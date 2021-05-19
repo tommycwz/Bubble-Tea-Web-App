@@ -4,23 +4,27 @@ session_start();
 $name = $_SESSION['name'];
 $ftotal = $_SESSION['ftotal'];
 
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp");
-mysqli_select_db($con,'teaapp');
+include 'dbconnect.php';
 
 $cardName = $_POST['cardName'];
 $cardNum = $_POST['cardNum'];
 $cvv = $_POST['cvv'];
 
+$cardCorrect = true;
+
 if((strlen($cardNum)!= 12) || !(is_numeric($cardNum))){
     echo '<script>alert("Invalid Card Number!\nA valid Card Number should be a 12-digit combination!")</script>'; 
-    header( "Refresh:0; url=http://18.191.207.218//CSC4610/webpage/checkout.php", true, 303);
-    return;
+    $cardCorrect = false;
 }
 
 if((strlen($cvv)!= 3) || !(is_numeric($cvv))){
     echo '<script>alert("Invalid CVV!\nA valid CVV should be a 3-digit combination!")</script>'; 
-    header( "Refresh:0; url=http://18.191.207.218//CSC4610/webpage/checkout.php", true, 303);
-    return;
+    $cardCorrect = false;
+}
+
+if(!$cardCorrect){
+    $_SESSION['cardProblem'] = true;
+    header( "Location: checkout.php");
 }
 
 $orderID = "O-" . rand(10000,99999);
@@ -54,4 +58,4 @@ while($data = mysqli_fetch_array($result)){
 $rmv = "delete from cart where username = '$name'";
 mysqli_query($con,$rmv);
 echo '<script>alert("Payment Success!\n")</script>'; 
-header( "Refresh:0; url=http://18.191.207.218/csc4610/webpage/delivery.php", true, 303);
+header( "Location: delivery.php");

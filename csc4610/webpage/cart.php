@@ -2,8 +2,7 @@
 session_start();
 $name = $_SESSION['name'];
 $capName =strtoupper($name);
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp") or die("Unable to Connect to '$dbhost'");
-mysqli_select_db($con,'teaapp') or die("Could not open the db '$dbname'");
+include 'dbconnect.php';
 
 $sel = "select * from cart, menu where username = '$name' && menu.bevID = cart.bevID";
 $result = mysqli_query($con, $sel);
@@ -37,12 +36,13 @@ $_SESSION['flag'] = $flag;
             $ice = $data[4];
             $bevName = $data[6];
             $image = $data[7];
+            $bevType = $data[8];
 			$price = $data[9];
             $total += $price;
             $totalbft = number_format($total,2);
             
             echo"<tr>";
-            echo"<td><img src='../image/milkTea/$image.png' alt='$image' class='$image' width='150' height='175'></td>";
+            echo"<td><img src='../image/$bevType/$image.png' alt='$image' class='$image' width='150' height='175'></td>";
             echo"<td><b>{$bevName}</b></td>";
             echo"<td><b>{$sugar}</b></td>";
             echo"<td><b>{$ice}</b></td>";

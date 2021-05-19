@@ -1,6 +1,5 @@
 <?php
-$con = mysqli_connect("127.0.0.1", "root", "", "teaapp") or die("Unable to Connect to '$dbhost'");
-mysqli_select_db($con,'teaapp') or die("Could not open the db '$dbname'");
+include '../dbconnect.php';
 
 $sel = "select * from payment order by date, time";
 $result = mysqli_query($con, $sel);

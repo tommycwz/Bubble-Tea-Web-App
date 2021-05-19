@@ -18,10 +18,10 @@ $_SESSION['flag'] = $flag;
         <div class="center">
             <div class="grid-container">
                 <div class="grid-item header"><hr><h1>Database</h1><hr></div>
-                <div class="grid-item"><button onclick="location.href ='http://18.191.207.218//CSC4610/webpage/admin/userDB.php';" id="userinfo">USER INFO</button></div>
-                <div class="grid-item"><button onclick="location.href ='http://18.191.207.218//CSC4610/webpage/admin/menuDB.php';" id="menuinfo">MENU INFO</button></div>
-                <div class="grid-item"><button onclick="location.href ='http://18.191.207.218//CSC4610/webpage/admin/paymentDB.php';" id="payment">PAYMENT MADE</button></div>
-                <div class="grid-item"><button onclick="location.href ='http://18.191.207.218//CSC4610/webpage/admin/orderDB.php';" id="order_hist">ORDER HISTORY</button></div>
+                <div class="grid-item"><button onclick="location.href ='http://localhost//CSC4610/webpage/admin/userDB.php';" id="userinfo">USER INFO</button></div>
+                <div class="grid-item"><button onclick="location.href ='http://localhost//CSC4610/webpage/admin/menuDB.php';" id="menuinfo">MENU INFO</button></div>
+                <div class="grid-item"><button onclick="location.href ='http://localhost//CSC4610/webpage/admin/paymentDB.php';" id="payment">PAYMENT MADE</button></div>
+                <div class="grid-item"><button onclick="location.href ='http://localhost//CSC4610/webpage/admin/orderDB.php';" id="order_hist">ORDER HISTORY</button></div>
             </div>
         </div>
     
