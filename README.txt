@@ -1,4 +1,4 @@
-The link to the webpage: http://18.191.207.218/CSC4610/webpage/login.html (No longer in service)
+The link to the webpage: http://tommycwz.infinityfreeapp.com/csc4610/webpage/login.html?i=1
 
 Step by step instructions:
 1) Click on the link above will redirect you to the first page of the web project.
