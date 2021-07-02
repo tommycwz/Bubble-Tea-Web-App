@@ -1,4 +1,7 @@
-The link to the webpage: http://tommycwz.infinityfreeapp.com/csc4610/webpage/login.html?i=1
+The link to the webpage: http://tommycwz.infinityfreeapp.com/csc4610/webpage/login.html
+Test User Account:
+username: user
+Password: user
 
 Step by step instructions:
 1) Click on the link above will redirect you to the first page of the web project.
